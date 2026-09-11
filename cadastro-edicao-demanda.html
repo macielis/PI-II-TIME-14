@@ -22,5 +22,60 @@
         <li>data da última atualização - automatico</li>
         <li>prazo de finalização</li>
     </ul>
+
+    <form>
+        <div>
+            <label>titúlo</label>
+            <input placeholder="titúlo da demanda">
+        </div>
+        <div>
+            <label>descrição</label>
+            <textarea placeholder="pequena descrição da demanda"></textarea>
+        </div>
+        <div>
+            <label>tipo da demanda</label>
+            <select>
+                <option>tarefa</option>
+                <option>defeito</option>
+                <option>melhoria</option>
+                <option>documentação</option>
+            </select>
+        </div>
+        <div>
+            <label>prioridade</label>
+            <select>
+                <option>critica</option>
+                <option>alta</option>
+                <option>media</option>
+                <option>baixa</option>
+            </select>
+        </div>
+        <div>
+            <label>status</label>
+            <select>
+                <option>Aberta</option>
+                <option>Em andamento</option>
+                <option>Em revisão</option>
+                <option>Concluída</option>
+                <option>Cancelada</option>
+            </select>
+        </div>
+        <div>
+            <label>projeto associado</label>
+            <input placeholder="nome do projeto">
+        </div>
+        <div>
+            <label>responsável</label>
+            <input placeholder="nome do responsável">
+        </div>
+        <div>
+            <label>prazo de finalização</label>
+            <input type="date">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Reiniciar">
+        </div>
+    </form>
 </body>
 </html>
