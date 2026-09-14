@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <main class="conteudo-principal">
+    <section class="cartao-acesso">
+      <div class="topo-cartao">
+        <div class="marca">Logo / Nome</div>
+        <h1>Bem-vindo</h1>
+        <p>Acesse sua conta para continuar</p>
+      </div>
+
+      <form class="formulario" action="#" method="POST" onsubmit="return false;">
+        <div class="grupo-campo">
+          <label for="campo-usuario">E-mail ou Usuário</label>
+          <input 
+            type="email" 
+            id="campo-usuario" 
+            class="campo-texto" 
+            placeholder="nome@exemplo.com" 
+            required 
+            autocomplete="email"
+          >
+        </div>
+
+        <div class="grupo-campo">
+          <label for="campo-senha">Senha</label>
+          <input 
+            type="password" 
+            id="campo-senha" 
+            class="campo-texto" 
+            placeholder="••••••••" 
+            required 
+            autocomplete="current-password"
+          >
+        </div>
+
+        <div class="acoes-formulario">
+          <button type="submit" class="botao botao-primario">
+            <i class="ph-bold ph-sign-in"></i> Entrar
+          </button>
+          
+          <div class="divisor">ou</div>
+
+          <a href="cadastro.html" class="botao botao-secundario">
+            <i class="ph-bold ph-user-plus"></i> Criar Conta
+          </a>
+        </div>
+      </form>
+
+      <footer class="rodape-suporte">
+        <details class="suporte-retratil">
+          <summary class="titulo-suporte">
+            <i class="ph-bold ph-code"></i> Precisa de ajuda? Contate os desenvolvedores
+          </summary>
+          <div class="lista-desenvolvedores">
+            <div class="item-desenvolvedor">
+              <span class="nome-desenvolvedor">Felipe Ferles Moratori</span>
+              <a href="mailto:felipe.fm2@puccampinas.edu.br" class="email-desenvolvedor">felipe.fm2@puccampinas.edu.br</a>
+            </div>
+            <div class="item-desenvolvedor">
+              <span class="nome-desenvolvedor">Gabriel Hernandes Batista</span>
+              <a href="mailto:gabriel.hb5@puccampinas.edu.br" class="email-desenvolvedor">gabriel.hb5@puccampinas.edu.br</a>
+            </div>
+            <div class="item-desenvolvedor">
+              <span class="nome-desenvolvedor">Gabriel Lara Jurgensen</span>
+              <a href="mailto:gabriel.lj1@puccampinas.edu.br" class="email-desenvolvedor">gabriel.lj1@puccampinas.edu.br</a>
+            </div>
+            <div class="item-desenvolvedor">
+              <span class="nome-desenvolvedor">Matthius Schultheis Matulis</span>
+              <a href="mailto:matthius.sm@puccampinas.edu.br" class="email-desenvolvedor">matthius.sm@puccampinas.edu.br</a>
+            </div>
+            <div class="item-desenvolvedor">
+              <span class="nome-desenvolvedor">Ramiro Alexander Sempertegui Rodas</span>
+              <a href="mailto:ramiro.asr@puccampinas.edu.br" class="email-desenvolvedor">ramiro.asr@puccampinas.edu.br</a>
+            </div>
+          </div>
+        </details>
+      </footer>
+    </section>
+  </main>
+
+</body>
+</html>
