@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acompanhamento de Demandas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ListDemandaEstilo.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">PI2</div> <!-- Colocar Logo quando tiver -->
+    ProjetoIntegrado2
+  </div>
+  <nav>
+    <a href="#">Menu</a> <!-- Referênciar Menu Principal -->
+    <a href="#" class="ativo">Demandas</a>
+    <a href="#">Dashboard</a> <!-- Referênciar Dashboard -->
+  </nav>
+  <div class="usuario">
+    <div class="avatar">UL</div>
+    Usuário Logado <!-- Exibir Usuário Logado e Ícone -->
+  </div>
+</header>
+
+<main>
+  <div class="cabecalho-pagina">
+    <div>
+      <h1>Listagem de Demandaas</h1>
+      <p>Acompanhe o status de todas as demandas de desenvolvimento em andamento.</p>
+    </div>
+    <div class="acoes-topo">
+      <button class="btn btn-primario">+ Nova Demanda</button> <!-- Referênciar Cadastro/Edição de Demanda -->
+    </div>
+  </div>
+
+  <section class="resumo">
+    <div class="card-resumo">
+      <div class="rotulo">Total de demandas</div>
+      <div class="valor">1</div>
+    </div>
+    <div class="card-resumo">
+      <div class="rotulo">Em andamento</div>
+      <div class="valor roxo">1</div>
+    </div>
+    <div class="card-resumo">
+      <div class="rotulo">Concluídas</div>
+      <div class="valor positivo">0</div>
+    </div>
+    <div class="card-resumo">
+      <div class="rotulo">Atrasadas</div>
+      <div class="valor" style="color:#f87171;">0</div>
+    </div>
+  </section>
+
+  <!-- Adicionar Funcionabilidade de Filtragem de Demandas -->
+
+  <section class="bloco-tabela">
+    <div class="cabecalho-bloco">
+      <h2>Demandas cadastradas</h2>
+    </div>
+
+    <div style="overflow-x:auto;"> <!-- Adiciona automático o coiso de roleta a aba(Pra não ter muitas demandas numa página só) -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Demanda</th>
+          <th>Responsável</th>
+          <th>Prioridade</th>
+          <th>Progresso</th>
+          <th>Status</th>
+          <th>Prazo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="id-demanda">#0142</td>
+          <td class="titulo-demanda">Listagem de Denandas
+            <span>Módulo de Demandas</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">U1</div>
+              Usuário
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-alta">Alta</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:70%;"></div></div>
+              <span class="texto-progresso">70%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-andamento">Em andamento</span></td>
+          <td>18/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="rodape-tabela">
+      <span>Exibindo 1 de - demandas</span> <!-- Quantidade de demandas por página e total -->
+      <div class="paginacao">
+        <button class="ativo">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>›</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
