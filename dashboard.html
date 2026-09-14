@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Projeto Integrador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard">
+
+        <aside class="menulateral">
+            <div class="logo">
+                <div class="marca">PI</div>
+
+                <div>
+                    <h2>Projeto Integrador</h2>
+                    <p>Sistema de Gestão</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <a href="#" class="itemmenu ativo">Dashboard</a>
+                <a href="#" class="itemmenu">Clientes</a>
+                <a href="#" class="itemmenu">Pedidos</a>
+                <a href="#" class="itemmenu">Produtos</a>
+                <a href="#" class="itemmenu">Relatórios</a>
+            </nav>
+
+            <div class="usuario">
+                <div class="avatar">FM</div>
+
+                <div class="infousuario">
+                    <strong>Felipe Moratori</strong>
+                    <span>Administrador</span>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="conteudo">
+
+            <header class="cabecalho">
+                <div>
+                    <p class="boasvindas">Bem-vindo de volta</p>
+                    <h1>Dashboard</h1>
+                    <p class="descricao">
+                        Acompanhe as principais informações do sistema.
+                    </p>
+                </div>
+
+                <button class="botaoprincipal">+ Novo pedido</button>
+            </header>
+
+
+            <section class="cartoes">
+
+                <div class="cartao">
+                    <div class="topocartao">
+                        <span class="nomecartao">Pedidos</span>
+                        <span class="indicador">+12%</span>
+                    </div>
+
+                    <strong class="numerocartao">128</strong>
+                    <p>Total de pedidos cadastrados</p>
+                </div>
+
+
+                <div class="cartao">
+                    <div class="topocartao">
+                        <span class="nomecartao">Clientes</span>
+                        <span class="indicador">+8%</span>
+                    </div>
+
+                    <strong class="numerocartao">76</strong>
+                    <p>Clientes cadastrados</p>
+                </div>
+
+
+                <div class="cartao">
+                    <div class="topocartao">
+                        <span class="nomecartao">Em andamento</span>
+                        <span class="pontostatus"></span>
+                    </div>
+
+                    <strong class="numerocartao">14</strong>
+                    <p>Pedidos sendo processados</p>
+                </div>
+
+
+                <div class="cartao">
+                    <div class="topocartao">
+                        <span class="nomecartao">Concluídos</span>
+                        <span class="indicador">+5%</span>
+                    </div>
+
+                    <strong class="numerocartao">103</strong>
+                    <p>Pedidos finalizados</p>
+                </div>
+
+            </section>
+
+
+            <section class="areaprincipal">
+
+                <div class="painel">
+
+                    <div class="cabecalhopainel">
+                        <div>
+                            <h2>Pedidos recentes</h2>
+                            <p>Últimos pedidos cadastrados no sistema</p>
+                        </div>
+
+                        <button class="botaosecundario">Ver todos</button>
+                    </div>
+
+
+                    <div class="tabelaresponsiva">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Data</th>
+                                    <th>Valor</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>#0128</td>
+                                    <td>Mariana Silva</td>
+                                    <td>13/09/2026</td>
+                                    <td>R$ 320,00</td>
+                                    <td>
+                                        <span class="status concluido">Concluído</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#0127</td>
+                                    <td>Lucas Almeida</td>
+                                    <td>12/09/2026</td>
+                                    <td>R$ 180,00</td>
+                                    <td>
+                                        <span class="status andamento">Em andamento</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#0126</td>
+                                    <td>Ana Beatriz</td>
+                                    <td>12/09/2026</td>
+                                    <td>R$ 450,00</td>
+                                    <td>
+                                        <span class="status concluido">Concluído</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#0125</td>
+                                    <td>Gabriel Souza</td>
+                                    <td>11/09/2026</td>
+                                    <td>R$ 240,00</td>
+                                    <td>
+                                        <span class="status pendente">Pendente</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>#0124</td>
+                                    <td>Carolina Lima</td>
+                                    <td>10/09/2026</td>
+                                    <td>R$ 390,00</td>
+                                    <td>
+                                        <span class="status concluido">Concluído</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+                <div class="painel">
+
+                    <div class="cabecalhopainel">
+                        <div>
+                            <h2>Acesso rápido</h2>
+                            <p>Principais funções</p>
+                        </div>
+                    </div>
+
+                    <div class="acoes">
+                        <a href="#" class="acao">
+                            <div>
+                                <strong>Cadastrar cliente</strong>
+                                <span>Adicionar um novo cliente</span>
+                            </div>
+
+                            <span class="seta">›</span>
+                        </a>
+
+                        <a href="#" class="acao">
+                            <div>
+                                <strong>Novo pedido</strong>
+                                <span>Registrar um novo pedido</span>
+                            </div>
+
+                            <span class="seta">›</span>
+                        </a>
+
+                        <a href="#" class="acao">
+                            <div>
+                                <strong>Consultar pedidos</strong>
+                                <span>Visualizar pedidos cadastrados</span>
+                            </div>
+
+                            <span class="seta">›</span>
+                        </a>
+                    </div>
+
+
+                    <div class="resumo">
+                        <p>Resumo do mês</p>
+
+                        <div class="linharesumo">
+                            <span>Pedidos</span>
+                            <strong>34</strong>
+                        </div>
+
+                        <div class="linharesumo">
+                            <span>Concluídos</span>
+                            <strong>27</strong>
+                        </div>
+
+                        <div class="linharesumo">
+                            <span>Pendentes</span>
+                            <strong>7</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
