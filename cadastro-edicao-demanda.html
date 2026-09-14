@@ -4,54 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro/Edição de Demandas</title>
+    <link rel="stylesheet" href="cedstyle.css">
 </head>
 <!-- feito por matthius schultheis-->
 <body>
-    <h1>Cadastro e Edição de Demandas</h1>
+    <div class="cabecalho">
 
-    <p>cadastro</p>
-    <ul>
-        <li>titúlo</li>
-        <li>descrição</li>
-        <li>tipo da demanda</li>
-        <li>prioridade</li>
-        <li>status</li>
-        <li>projeto associado</li>
-        <li>responsável</li>
-        <li>data de criação - automatico</li>
-        <li>data da última atualização - automatico</li>
-        <li>prazo de finalização</li>
-    </ul>
+        <h1 class="logo">Cadastro e Edição de Demandas</h1>
+
+    </div>
 
     <form>
-        <div>
-            <label>titúlo</label>
-            <input placeholder="titúlo da demanda">
+        <div class="linha linha-completa">
+            <label>Titúlo</label>
+            <input placeholder="Titúlo da demanda">
         </div>
-        <div>
-            <label>descrição</label>
-            <textarea placeholder="pequena descrição da demanda"></textarea>
+        <div class="linha linha-completa">
+            <label>Descrição</label>
+            <textarea placeholder="Pequena descrição da demanda"></textarea>
         </div>
-        <div>
-            <label>tipo da demanda</label>
+        <div class="linha">
+            <label>Tipo da demanda</label>
             <select>
-                <option>tarefa</option>
-                <option>defeito</option>
-                <option>melhoria</option>
-                <option>documentação</option>
+                <option>Tarefa</option>
+                <option>Defeito</option>
+                <option>Melhoria</option>
+                <option>Documentação</option>
             </select>
         </div>
-        <div>
-            <label>prioridade</label>
+        <div class="linha">
+            <label>Prioridade</label>
             <select>
-                <option>critica</option>
-                <option>alta</option>
-                <option>media</option>
-                <option>baixa</option>
+                <option>Crítica</option>
+                <option>Alta</option>
+                <option>Média</option>
+                <option>Baixa</option>
             </select>
         </div>
-        <div>
-            <label>status</label>
+        <div class="linha">
+            <label>Status</label>
             <select>
                 <option>Aberta</option>
                 <option>Em andamento</option>
@@ -60,19 +51,19 @@
                 <option>Cancelada</option>
             </select>
         </div>
-        <div>
-            <label>projeto associado</label>
-            <input placeholder="nome do projeto">
+        <div class="linha">
+            <label>Projeto associado</label>
+            <input placeholder="Nome do projeto">
         </div>
-        <div>
-            <label>responsável</label>
-            <input placeholder="nome do responsável">
+        <div class="linha">
+            <label>Responsável</label>
+            <input placeholder="Nome do responsável">
         </div>
-        <div>
-            <label>prazo de finalização</label>
+        <div class="linha">
+            <label>Prazo de finalização</label>
             <input type="date">
         </div>
-        <div>
+        <div class="linha">
             <input type="submit" value="Enviar">
             <input type="reset" value="Reiniciar">
         </div>
