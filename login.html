@@ -1,3 +1,10 @@
+<!--
+  Arquivo: login.html
+  Autor: Gabriel Lara jurgensen
+  Descrição: tela de login de contas existentes
+  Esforço: 2h
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,21 +20,22 @@
     <section class="cartao-acesso">
       <div class="topo-cartao">
         <div class="marca">Logo / Nome</div>
-        <h1>Bem-vindo</h1>
+        <h1>Bem-vindo de volta</h1>
         <p>Acesse sua conta para continuar</p>
       </div>
 
-      <form class="formulario" action="#" method="POST" onsubmit="return false;">
+      <form class="formulario" id="form-login" action="#" method="POST" novalidate>
         <div class="grupo-campo">
           <label for="campo-usuario">E-mail ou Usuário</label>
           <input 
-            type="email" 
+            type="text" 
             id="campo-usuario" 
             class="campo-texto" 
             placeholder="nome@exemplo.com" 
             required 
-            autocomplete="email"
+            autocomplete="username"
           >
+          <span class="mensagem-erro" id="erro-campo-usuario" role="alert"></span>
         </div>
 
         <div class="grupo-campo">
@@ -40,7 +48,10 @@
             required 
             autocomplete="current-password"
           >
+          <span class="mensagem-erro" id="erro-campo-senha" role="alert"></span>
         </div>
+
+        <div class="mensagem-formulario" id="mensagem-formulario" role="status"></div>
 
         <div class="acoes-formulario">
           <button type="submit" class="botao botao-primario">
@@ -87,5 +98,7 @@
     </section>
   </main>
 
+  <script src="js/validacoes.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
