@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="detalhes_demanda.css">
 
+     <script src="detalhes_demanda.js" defer></script>
+
 </head>
 <body>
     <header class="cabecalho">
@@ -120,15 +122,17 @@
                 <p>A tela de login já está sendo desenvolvida.</p>
                 <p>(Data do comentário)</p>
             </div>
-            <div class="enviar_comentario">
-                <!-- o for do label tem que ser igual o id do input --> 
-                <label for="nome_id"></label>
-                <input type="text" name="Nome" id="nome_id"
-                    placeholder="Adicione um comentário...">
-            </div>
-            <div>
-                <input id="adicionar_comentario_id" type="submit" value="Adicionar comentário">
-            </div>
+            <form id="form_comentario" action="/comentarios" method="post" novalidate>
+                <div class="enviar_comentario">
+                    <label for="comentario_id"></label>
+                    <textarea name="comentario" id="comentario_id" class="form-control"
+                        required minlength="3" maxlength="500" placeholder="Adicione um comentário..."></textarea>
+                    <div id="erro_comentario" class="invalid-feedback"></div>
+                </div>
+                <div>
+                    <button type="submit" class="botao_enviar_comentario">Enviar Comentário</button>
+                </div>
+            </form>
         </section>
             
     </main>
@@ -139,5 +143,3 @@
    
 </body>
 </html>
-
-<!-- 9:30 horas -->

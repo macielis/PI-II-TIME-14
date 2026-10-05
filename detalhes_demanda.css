@@ -166,17 +166,26 @@ h2 {
     padding-bottom: 20px;
 }
 
-input[type="text"] {
+form .enviar_comentario textarea {
     background-color: #18202e;
     color: white;
     border: 1px solid #2d3b4e;
     border-radius: 8px;
-    width: 450px;
-    height: 35px;
-    padding-inline: 10px;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
-#adicionar_comentario_id {
+form .enviar_comentario textarea:focus {
+    outline: none;
+    border-color: #5B21B6;
+}
+
+.botao_enviar_comentario {
     display: flex;
     background-color: #5B21B6;
     padding: 16px;
@@ -188,6 +197,22 @@ input[type="text"] {
     font-size: 18px;
 }
     
-#adicionar_comentario_id:hover {
+.botao_enviar_comentario:hover {
     transform: translateY(-5px);
+}
+
+
+
+/* esse código evita que o "form-control" do HTML mude o visual do campo de escrever comentário */
+form .enviar_comentario textarea,
+form .enviar_comentario textarea:focus {
+    background-color: #18202e;
+    color: white;
+}
+
+/* também ajuda na remoção de elementos colocados pelo "form-control" */
+form .enviar_comentario textarea:focus {
+    border-color: #5B21B6;
+    box-shadow: none; 
+    outline: none;
 }
