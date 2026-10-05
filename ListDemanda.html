@@ -30,7 +30,7 @@
 <main>
   <div class="cabecalho-pagina">
     <div>
-      <h1>Listagem de Demandas</h1>
+      <h1>Listagem de Demandaas</h1>
       <p>Acompanhe o status de todas as demandas de desenvolvimento em andamento.</p>
     </div>
     <div class="acoes-topo">
@@ -65,6 +65,7 @@
       <div class="campo">
         <label for="busca">Buscar</label>
         <input type="text" id="busca" name="busca" placeholder="Título ou ID da demanda" minlength="2" maxlength="60">
+        <span id="erro-busca" style="color:#f87171; font-size:12px;" class="mensagem-erro"></span>
       </div>
       <div class="campo">
         <label for="status">Status</label>
@@ -75,6 +76,7 @@
           <option>Concluída</option>
           <option>Atrasada</option>
         </select>
+        <span id="erro-status" style="color:#f87171; font-size:12px;"></span>
       </div>
       <div class="campo">
         <label for="prioridade">Prioridade</label>
@@ -85,6 +87,7 @@
           <option>Média</option>
           <option>Baixa</option>
         </select>
+        <span id="erro-prioridade" style="color:#f87171; font-size:12px;"></span>
       </div>
       <div class="campo">
         <label for="responsavel">Responsável</label>
@@ -124,13 +127,13 @@
       <tbody>
         <tr>
           <td class="id-demanda">#0142</td>
-          <td class="titulo-demanda">Listagem de Demandas
+          <td class="titulo-demanda">Listagem de Denandas
             <span>Módulo de Demandas</span>
           </td>
           <td>
             <div class="responsavel">
-              <div class="avatar">RA</div>
-              Ramiro Alexander
+              <div class="avatar">U1</div>
+              Usuário
             </div>
           </td>
           <td><span class="prioridade prioridade-alta">Alta</span></td>
@@ -237,8 +240,8 @@
           </td>
           <td>
             <div class="responsavel">
-              <div class="avatar">FF</div>
-              Felipe Ferles
+              <div class="avatar">GH</div>
+              Gabriel Hernandes
             </div>
           </td>
           <td><span class="prioridade prioridade-media">Média</span></td>
@@ -291,8 +294,8 @@
           </td>
           <td>
             <div class="responsavel">
-              <div class="avatar">MS</div>
-              Mathius Schultheis
+              <div class="avatar">GL</div>
+              Gabriel Lara
             </div>
           </td>
           <td><span class="prioridade prioridade-critica">Crítica</span></td>
