@@ -1,79 +1,68 @@
 // Validações do formulário de filtros da tela "Listagem de Demandas".
-// Responsabilidade: Ramiro Alexander
+// Autor: Ramiro Alexander
 
-(function () {
-  document.addEventListener('DOMContentLoaded', inicializar);
+window.onload = function () {
 
-  function inicializar() {
-    var formulario = document.getElementById('form-filtros');
-    if (!formulario) {
-      return;
+  var formulario = document.getElementById("form-filtros");
+  var campoBusca = document.getElementById("busca");
+  var campoStatus = document.getElementById("status");
+  var campoPrioridade = document.getElementById("prioridade");
+
+
+  var erroBusca = document.getElementById("erro-busca");
+  var erroStatus = document.getElementById("erro-status");
+  var erroPrioridade = document.getElementById("erro-prioridade");
+
+  
+  formulario.addEventListener("submit", function (evento) {
+    var formularioValido = true;
+
+  
+    erroBusca.innerHTML = "";
+    erroStatus.innerHTML = "";
+    erroPrioridade.innerHTML = "";
+
+
+    var valorBusca = campoBusca.value;
+    valorBusca = valorBusca.trim(); 
+
+    if (valorBusca.length > 0 && valorBusca.length < 2) {
+      erroBusca.innerHTML = "Digite pelo menos 2 caracteres para buscar.";
+      formularioValido = false;
     }
 
-    var campoBusca = document.getElementById('busca');
-    var campoStatus = document.getElementById('status');
-    var campoPrioridade = document.getElementById('prioridade');
+    if (valorBusca.length > 60) {
+      erroBusca.innerHTML = "A busca pode ter no máximo 60 caracteres.";
+      formularioValido = false;
+    }
+    var valorStatus = campoStatus.value;
 
-    var STATUS_PERMITIDOS = ['Todos', 'Pendente', 'Em andamento', 'Concluída', 'Atrasada'];
-    var PRIORIDADES_PERMITIDAS = ['Todas', 'Crítica', 'Alta', 'Média', 'Baixa'];
+    if (valorStatus !== "Todos" &&
+        valorStatus !== "Pendente" &&
+        valorStatus !== "Em andamento" &&
+        valorStatus !== "Concluída" &&
+        valorStatus !== "Atrasada") {
+      erroStatus.innerHTML = "Selecione um status válido.";
+      formularioValido = false;
+    }
+    var valorPrioridade = campoPrioridade.value;
 
-    var TAMANHO_MINIMO_BUSCA = 2;
-    var TAMANHO_MAXIMO_BUSCA = 60;
-
-    function validarBusca() {
-      var valor = campoBusca.value.trim();
-
-      if (valor.length === 0) {
-        campoBusca.setCustomValidity('');
-        return;
-      }
-
-      if (valor.length < TAMANHO_MINIMO_BUSCA) {
-        campoBusca.setCustomValidity(
-          'Digite pelo menos ' + TAMANHO_MINIMO_BUSCA + ' caracteres para buscar, ou deixe o campo em branco.'
-        );
-        return;
-      }
-
-      if (valor.length > TAMANHO_MAXIMO_BUSCA) {
-        campoBusca.setCustomValidity(
-          'A busca deve ter no máximo ' + TAMANHO_MAXIMO_BUSCA + ' caracteres.'
-        );
-        return;
-      }
-
-      campoBusca.setCustomValidity('');
+    if (valorPrioridade !== "Todas" &&
+        valorPrioridade !== "Crítica" &&
+        valorPrioridade !== "Alta" &&
+        valorPrioridade !== "Média" &&
+        valorPrioridade !== "Baixa") {
+      erroPrioridade.innerHTML = "Selecione uma prioridade válida.";
+      formularioValido = false;
+    }
+    if (formularioValido === false) {
+      evento.preventDefault();
     }
 
-    function validarSelecao(campo, valoresPermitidos, descricaoCampo) {
-      if (valoresPermitidos.indexOf(campo.value) === -1) {
-        campo.setCustomValidity('Selecione ' + descricaoCampo + ' válido(a) dentre as opções disponíveis.');
-      } else {
-        campo.setCustomValidity('');
-      }
-    }
+  });
 
-    function validarStatus() {
-      validarSelecao(campoStatus, STATUS_PERMITIDOS, 'um status');
-    }
+};
 
-    function validarPrioridade() {
-      validarSelecao(campoPrioridade, PRIORIDADES_PERMITIDAS, 'uma prioridade');
-    }
 
-    campoBusca.addEventListener('input', validarBusca);
-    campoStatus.addEventListener('change', validarStatus);
-    campoPrioridade.addEventListener('change', validarPrioridade);
 
-    formulario.addEventListener('submit', function (evento) {
-      validarBusca();
-      validarStatus();
-      validarPrioridade();
-
-      if (!formulario.checkValidity()) {
-        evento.preventDefault();
-        formulario.reportValidity();
-      }
-    });
-  }
-})();
+    
