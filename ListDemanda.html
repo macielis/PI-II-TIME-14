@@ -30,7 +30,7 @@
 <main>
   <div class="cabecalho-pagina">
     <div>
-      <h1>Listagem de Demandaas</h1>
+      <h1>Listagem de Demandas</h1>
       <p>Acompanhe o status de todas as demandas de desenvolvimento em andamento.</p>
     </div>
     <div class="acoes-topo">
@@ -41,30 +41,73 @@
   <section class="resumo">
     <div class="card-resumo">
       <div class="rotulo">Total de demandas</div>
-      <div class="valor">1</div>
+      <div class="valor">8</div>
     </div>
     <div class="card-resumo">
       <div class="rotulo">Em andamento</div>
-      <div class="valor roxo">1</div>
+      <div class="valor roxo">3</div>
     </div>
     <div class="card-resumo">
       <div class="rotulo">Concluídas</div>
-      <div class="valor positivo">0</div>
+      <div class="valor positivo">2</div>
     </div>
     <div class="card-resumo">
       <div class="rotulo">Atrasadas</div>
-      <div class="valor" style="color:#f87171;">0</div>
+      <div class="valor" style="color:#f87171;">1</div>
     </div>
   </section>
 
   <!-- Adicionar Funcionabilidade de Filtragem de Demandas -->
+ <section class="bloco-filtros">
+    <h2>Filtrar demandas</h2>
+    <form id="form-filtros" novalidate>
+    <div class="linha-formulario">
+      <div class="campo">
+        <label for="busca">Buscar</label>
+        <input type="text" id="busca" name="busca" placeholder="Título ou ID da demanda" minlength="2" maxlength="60">
+      </div>
+      <div class="campo">
+        <label for="status">Status</label>
+        <select id="status" name="status">
+          <option>Todos</option>
+          <option>Pendente</option>
+          <option>Em andamento</option>
+          <option>Concluída</option>
+          <option>Atrasada</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="prioridade">Prioridade</label>
+        <select id="prioridade" name="prioridade">
+          <option>Todas</option>
+          <option>Crítica</option>
+          <option>Alta</option>
+          <option>Média</option>
+          <option>Baixa</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="responsavel">Responsável</label>
+        <select id="responsavel" name="responsavel">
+          <option>Todos</option>
+          <option>Ramiro Alexander</option>
+          <option>Gabriel Lara</option>
+          <option>Gabriel Hernandes</option>
+        </select>
+      </div>
+      <div class="campo campo-acao">
+        <button class="btn btn-primario" type="submit">Aplicar filtros</button>
+      </div>
+    </div>
+    </form>
+  </section>
 
   <section class="bloco-tabela">
     <div class="cabecalho-bloco">
       <h2>Demandas cadastradas</h2>
     </div>
 
-    <div style="overflow-x:auto;"> <!-- Adiciona automático o coiso de roleta a aba(Pra não ter muitas demandas numa página só) -->
+    <div class="tabela-scroll"> <!-- Adiciona automático o coiso de roleta a aba(Pra não ter muitas demandas numa página só) -->
     <table>
       <thead>
         <tr>
@@ -81,13 +124,13 @@
       <tbody>
         <tr>
           <td class="id-demanda">#0142</td>
-          <td class="titulo-demanda">Listagem de Denandas
+          <td class="titulo-demanda">Listagem de Demandas
             <span>Módulo de Demandas</span>
           </td>
           <td>
             <div class="responsavel">
-              <div class="avatar">U1</div>
-              Usuário
+              <div class="avatar">RA</div>
+              Ramiro Alexander
             </div>
           </td>
           <td><span class="prioridade prioridade-alta">Alta</span></td>
@@ -106,12 +149,201 @@
             </div>
           </td>
         </tr>
+        <tr>
+          <td class="id-demanda">#0143</td>
+          <td class="titulo-demanda">Cadastro de nova demanda
+            <span>Módulo de Demandas</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">RA</div>
+              Ramiro Alexander
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-critica">Crítica</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:20%;"></div></div>
+              <span class="texto-progresso">20%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-pendente">Pendente</span></td>
+          <td>30/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="id-demanda">#0144</td>
+          <td class="titulo-demanda">Validações de formulário
+            <span>Módulo de Demandas</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">RA</div>
+              Ramiro Alexander
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-alta">Alta</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:90%;"></div></div>
+              <span class="texto-progresso">90%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-andamento">Em andamento</span></td>
+          <td>20/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="id-demanda">#0145</td>
+          <td class="titulo-demanda">Tela de login
+            <span>Módulo de Autenticação</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">GL</div>
+              Gabriel Lara
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-alta">Alta</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:100%;"></div></div>
+              <span class="texto-progresso">100%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-concluida">Concluída</span></td>
+          <td>05/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="id-demanda">#0146</td>
+          <td class="titulo-demanda">Dashboard de indicadores
+            <span>Módulo de Dashboard</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">FF</div>
+              Felipe Ferles
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-media">Média</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:40%;"></div></div>
+              <span class="texto-progresso">40%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-andamento">Em andamento</span></td>
+          <td>28/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="id-demanda">#0147</td>
+          <td class="titulo-demanda">Integração com API de feriados
+            <span>Módulo de Demandas</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">GH</div>
+              Gabriel Hernandes
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-baixa">Baixa</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:0%;"></div></div>
+              <span class="texto-progresso">0%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-pendente">Pendente</span></td>
+          <td>15/10/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="id-demanda">#0148</td>
+          <td class="titulo-demanda">Correção de bug na listagem
+            <span>Módulo de Demandas</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">MS</div>
+              Mathius Schultheis
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-critica">Crítica</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:60%;"></div></div>
+              <span class="texto-progresso">60%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-atrasada">Atrasada</span></td>
+          <td>12/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="id-demanda">#0149</td>
+          <td class="titulo-demanda">Documentação técnica do sistema
+            <span>Documentação</span>
+          </td>
+          <td>
+            <div class="responsavel">
+              <div class="avatar">RA</div>
+              Ramiro Alexander
+            </div>
+          </td>
+          <td><span class="prioridade prioridade-baixa">Baixa</span></td>
+          <td>
+            <div class="celula-progresso">
+              <div class="barra-progresso"><div class="preenchimento" style="width:100%;"></div></div>
+              <span class="texto-progresso">100%</span>
+            </div>
+          </td>
+          <td><span class="badge badge-concluida">Concluída</span></td>
+          <td>01/09/2026</td>
+          <td>
+            <div class="acoes-tabela">
+              <button class="btn btn-secundario btn-pequeno">Ver</button>
+              <button class="btn btn-primario btn-pequeno">Editar</button>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
     </div>
 
     <div class="rodape-tabela">
-      <span>Exibindo 1 de - demandas</span> <!-- Quantidade de demandas por página e total -->
+      <span>Exibindo 8 de 8 demandas</span> <!-- Quantidade de demandas por página e total -->
       <div class="paginacao">
         <button class="ativo">1</button>
         <button>2</button>
@@ -122,5 +354,6 @@
   </section>
 </main>
 
+<script src="validacoes.js"></script>
 </body>
 </html>
