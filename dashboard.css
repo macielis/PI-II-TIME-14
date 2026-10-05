@@ -1,3 +1,4 @@
+/* Autor: Felipe Ferles Moratori — estilos do Dashboard. */
 * {
     margin: 0;
     padding: 0;
@@ -264,6 +265,7 @@ a {
 }
 
 .painel {
+    min-width: 0;
     background-color: #1F2937;
     border: 1px solid #2d3b4e;
     border-radius: 12px;
@@ -471,7 +473,21 @@ tbody tr:hover {
         flex-direction: column;
     }
 
+    .cabecalhopainel {
+        flex-wrap: wrap;
+    }
+
     .cartoes {
         grid-template-columns: 1fr;
     }
+}
+
+/* A orientação só ocupa espaço depois de uma ação do usuário. */
+.mensagemdashboard:not([hidden]) {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #A78BFA;
+    border-radius: 10px;
+    background-color: #1F2937;
+    color: #F9FAFB;
 }
