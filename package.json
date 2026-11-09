@@ -1,0 +1,25 @@
+{
+  "name": "backend-time14",
+  "version": "1.0.0",
+  "description": "API do Sistema de Acompanhamento de Demandas de Desenvolvimento - PI II - Time 14",
+  "main": "dist/server.js",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

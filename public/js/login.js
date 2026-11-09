@@ -15,7 +15,7 @@ function validarUsuario(valor) {
   const v = valor.trim();
   if (!v) return 'Informe seu e-mail ou usuário.';
   if (v.includes('@')) return validarEmail(v);
-  if (!REGEX_NOME.test(v)) { // Confirma por nome da pessoa ao inves de usuario, necessario adicionar campo de usuario no cadastro
+  if (!REGEX_USUARIO.test(v)) {
     return 'Usuário deve ter de 3 a 30 caracteres (letras, números, ponto, hífen ou sublinhado).';
   }
   return '';
@@ -36,7 +36,7 @@ campoUsuario.addEventListener('input', () => limparErro(campoUsuario));
 campoSenha.addEventListener('input', () => limparErro(campoSenha));
 
 // Impede o envio enquanto houver dados inválidos
-formLogin.addEventListener('submit', (evento) => {
+formLogin.addEventListener('submit', async (evento) => {
   evento.preventDefault();
   limparMensagemFormulario();
 
@@ -49,6 +49,12 @@ formLogin.addEventListener('submit', (evento) => {
     return;
   }
 
-  // Envio ao servidor será implementado nas próximas etapas
-  mostrarMensagemFormulario('Dados válidos! O envio ao servidor ainda não foi implementado.', 'sucesso');
+  const usuario = await enviarFormulario(formLogin, '/login', {
+    identificador: campoUsuario.value.trim(), senha: campoSenha.value
+  });
+  if (!usuario) return;
+  campoSenha.value = '';
+  mostrarMensagemFormulario(`Login aprovado! Bem-vindo, ${usuario.nome}. Perfil: ${usuario.perfil}.`, 'sucesso');
+  // A integração da sessão e da tela de destino será feita com as outras partes do grupo.
+
 });
