@@ -39,84 +39,95 @@ h2 {
 
 .detalhe_demanda {
     display: flex;
+    flex-direction: column;
+    gap: 40px;
     border: 1px solid #2d3b4e;
     padding: 25px;
     background-color: #1F2937;
-    justify-content: space-between;
     border-radius: 8px;
 }
 
-.elementos_detalhe {
+.cards {
+    background-color: #111827;
+    border: 1px solid #2d3b4e;
+    border-radius: 12px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    justify-content: space-between;
+    height: 160px;
+}
+
+.cards_grade {
+    display: grid;
+/* auto-fit diz para preencher o máximo possível dentro do espaço que ainda possui na linha */
+/* 1fr serve para esticar os cards no que sobrou de espaço livre */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.card_cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_titulo {
+    color: #D1D5DB;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card_valor{
+    color: #F9FAFB;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.card_detalhes {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card_detalhes_ativo {
+    background-color: #10B98126; /* os ultimos dois digitos representam a opacidade */
+    color: #22C55E;
+}
+
+.card_detalhes_prioridade {
+    background-color: #F59E0B26;
+    color: #f59e0b;
+}
+
+.card_valor_prioridade {
+    color: #f59e0b;
 }
 
 .link_editar {
     align-self: flex-end;
 }
 
-.elementos_demanda {
-    display: flex;
-    border: 1px solid #2d3b4e;
-    flex-direction: column;
-    width: 475px;
-    background-color: #242f3f;
-    border-radius: 8px;
-}
-
-.elementos_demanda strong {
-    font-size: 18px;
-}
-
-.demanda {
-    display: flex;
-    border: 1px solid #2d3b4e;
-    justify-content: space-between;
-    margin: 6px;
-    height: 54px;
-    align-items: center;
-    border-radius: 8px;
-    background-color: #1F2937;
-    padding-inline: 12px;
-}
-
-.status {
-    display: flex;
-    border: 1px solid #2d3b4e;
-    flex-direction: column;
-    width: 475px;
-    background-color: #242f3f;
-    border-radius: 8px;
-}
-
-.elementos_status { 
-    display: flex;
-    border: 1px solid #2d3b4e;
-    justify-content: space-between;
-    margin: 6px;
-    border-radius: 8px;
-    background-color: #1F2937;
-    padding-inline: 12px;
-}
-
-.status strong {
-    font-size: 18px;
-}
-
 .link_editar {
     display: flex;
+    align-self: center;
     background-color: #5B21B6;
-    padding: 16px;
-    margin-top: 262px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
     border-radius: 8px;
     box-shadow: 0 4px 8px -1px black;
-    transition: all 0.15s ease; /* display de trasição suave */ 
+    transition: all 0.15s ease; /* transição suave */ 
 }
 
 .link_editar:hover {
     transform: translateY(-5px); /* define o quanto a caixa irá se mexer em relação ao eixo Y */
 }
+
+/* ================================================== */
 
 .caixa_desc_info {
     border: 1px solid #2d3b4e;
